@@ -1,6 +1,6 @@
 Oblig X
 =======
-OsloMet brukernavn:
+OsloMet brukernavn: 
 
 GitHub brukernavn:
 

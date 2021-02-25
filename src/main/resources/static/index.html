@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Bestilling av kinobilletter</h1>
+
+
+    <form onsubmit="saveTickets()">
+
+        <select required id="movie">
+
+            <option disabled selectd >Velg film</option>
+            <option>Interstellar</option>
+            <option>Inception</option>
+            <option>Cars</option>
+
+        </select> <br/><br/>
+
+        <label for="amount">Antall</label>
+        <input required type="number" id="amount"/> <br/> <br/>
+
+        <label for="firstName">Fornavn</label>
+        <input required type="text" id="firstName"/> <br/>
+
+        <label for="lastName">Etternavn</label>
+        <input required type="text" id="lastName"/> <br/>
+
+        <label for="phone">Telefonnr</label>
+        <input required type="number" id="phone"/> <br/>
+
+        <label for="email">Epost</label>
+        <input required type="email" id="email"/> <br/>
+
+        <button type="submit">Kjøp billett</button>
+
+
+    </form>
+
+    <h2>Alle billetter</h2>
+    <div id="output"></div>
+
+    <button type="button" >Slett alle billetter</button>
+
+
+
+</body>
+</html>
