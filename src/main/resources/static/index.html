@@ -1,50 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+
+        body{
+            background-color: grey;
+        }
+
+        .row{
+            display: flex;
+            justify-content: flex-start;
+            padding: 0.25rem 0;
+
+        }
+        .col-sm-50 {
+            flex: 50%;
+        }
+        .container{
+            width: 20%;
+            margin: 0 auto;
+        }
+
+
+    </style>
 </head>
 <body>
-    <h1>Bestilling av kinobilletter</h1>
+    <div class="container">
+        <h1>Bestilling av kinobilletter</h1>
+    </div>
 
 
-    <form onsubmit="saveTickets()">
+    <form>
+        <div class="container" >
 
-        <select required id="movie">
+            <select required id="movie">
 
-            <option disabled selectd >Velg film</option>
-            <option>Interstellar</option>
-            <option>Inception</option>
-            <option>Cars</option>
+                <option disabled selected >Velg film</option>
+                <option>Interstellar</option>
+                <option>Inception</option>
+                <option>Cars</option>
 
-        </select> <br/><br/>
+            </select> <br/><br/>
 
-        <label for="amount">Antall</label>
-        <input required type="number" id="amount"/> <br/> <br/>
+            <div class="row">
+                <div class="col-sm-50">
+                    <label for="amount">Antall</label>
+                </div>
+                <div class="col-sm-50 row">
+                    <input required type="number" id="amount"/> <br/> <br/>
+                </div>
+            </div>
 
-        <label for="firstName">Fornavn</label>
-        <input required type="text" id="firstName"/> <br/>
-
-        <label for="lastName">Etternavn</label>
-        <input required type="text" id="lastName"/> <br/>
-
-        <label for="phone">Telefonnr</label>
-        <input required type="number" id="phone"/> <br/>
-
-        <label for="email">Epost</label>
-        <input required type="email" id="email"/> <br/>
-
-        <button type="submit">Kjøp billett</button>
+            <div class="row">
+                <div class="col-sm-50">
+                    <label for="firstName">Fornavn</label>
+                </div>
+                <div class="col-sm-50 row">
+                    <input required type="text" id="firstName"/>
+                </div>
 
 
+            </div>
+
+            <div class="row">
+                <div class="col-sm-50">
+                    <label for="lastName">Etternavn</label>
+                </div>
+                <div class="col-sm-50 row">
+                    <input required type="text" id="lastName"/> <br/>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-50">
+                    <label for="phone">Telefonnr</label>
+                </div>
+                <div class="col-sm-50 row">
+                    <input required type="number" id="phone"/> <br/>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-50">
+                    <label for="email">Epost</label>
+                </div>
+                <div class="col-sm-50 row">
+                    <input required type="email" id="email"/> <br/>
+                </div>
+
+
+            </div>
+
+            <button type="submit" id="submitBtn">Kjøp billett</button>
+
+
+
+        </div>
     </form>
 
-    <h2>Alle billetter</h2>
-    <div id="output"></div>
 
-    <button type="button" >Slett alle billetter</button>
+    <div class="container">
+        <button id="displayBtn" >Vis billetter</button>
+        <h2>Billetter</h2>
+        <div id="output"></div>
 
+        <button type="button" onclick="deleteTickets()">Slett alle billetter</button>
+    </div>
 
+    <script src="app.js"></script>
 
 </body>
 </html>

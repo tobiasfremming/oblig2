@@ -5,11 +5,11 @@ public class Ticket {
     private int amount;
     private String firstName;
     private String lastName;
-    private int phone;
+    private String phone;
     private String email;
 
 
-    public Ticket(String movie, int amount, String firstName, String lastName, int phone, String email) {
+    public Ticket(String movie, int amount, String firstName, String lastName, String phone, String email) {
         this.movie = movie;
         this.amount = amount;
         this.firstName = firstName;
@@ -53,11 +53,11 @@ public class Ticket {
         this.lastName = lastName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
