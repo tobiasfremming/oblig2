@@ -22,4 +22,6 @@ Jeg valgte å legge til en knapp som viser alle billetter som er lagret
 på server, slik at når man kjøper en billett kommer det kun
 opp det som blir lagret på server der og da. 
 Jeg følte at dette var mer passende, med tanke på at man skal 
-kjøpe kinobilletter. 
+kjøpe kinobilletter. Jeg brukte bootstrap til styling, men gjorde noen endringer
+i bootstrap klassene, for å få de til å passe bedre, i tillegg til at
+jeg har laget litt css selv. 
