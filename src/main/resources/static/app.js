@@ -8,11 +8,9 @@ console.log("js started")
 
 //const submitBtn = document.getElementById("submitBtn").addEventListener("click", saveTickets)
 
-const formAction = document.querySelector("form").addEventListener("submit", saveTickets)
 
-const displayBtn = document.getElementById("displayBtn").addEventListener("click", loadTickets)
 
-function saveTickets(e){
+const saveTickets = (e) => {
     e.preventDefault();
 
     let ticket = {
@@ -59,12 +57,12 @@ function renderTickets(data, interactions){
     
     console.log("renderTickets started")
     
-    let out = "<table><tr><th>Film</th>" +
-        "<th>Antall</th>" +
-        "<th>Fornavn</th>" +
-        "<th>Etternavn</th>" +
-        "<th>Telefonnr</th>" +
-        "<th>epost</th>" +
+    let out = "<table class=\"table\" ><tr><th>Film</th>" +
+        "<th scope=\"col\">Antall</th>" +
+        "<th scope=\"col\">Fornavn</th>" +
+        "<th scope=\"col\">Etternavn</th>" +
+        "<th scope=\"col\">Telefonnr</th>" +
+        "<th scope=\"col\">epost</th>" +
         "</tr>";
     for (let i = data.length-1; i >=interactions; i--) {
         out += "<tr><td>" + data[i].movie +
@@ -87,3 +85,8 @@ function deleteTickets(){
         $("#output").html("");
     });
 }
+
+const formAction = document.querySelector("form")
+formAction.addEventListener("submit", saveTickets)
+
+const displayBtn = document.getElementById("displayBtn").addEventListener("click", loadTickets)
