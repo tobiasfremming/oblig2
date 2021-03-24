@@ -4,9 +4,9 @@ OsloMet brukernavn: s351878
 
 GitHub brukernavn: tobiasfremming
 
-GitHub repo URL: https://oblig2tobiasfremming.herokuapp.com/
+GitHub repo URL: https://github.com/tobiasfremming/oblig2
 
-URL til Heroku app: 
+URL til Heroku app: https://oblig2tobiasfremming.herokuapp.com/
 
 Fullt navn: Tobias Fremming
 
