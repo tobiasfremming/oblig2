@@ -28,10 +28,10 @@ const saveTickets = (e) => {
         renderTickets(data,data.length-1)
     });
 
-    $("#movie").html("<option disabled selected >Velg film</option>\n" +
-        "            <option>Interstellar</option>\n" +
-        "            <option>Inception</option>\n" +
-        "            <option>Cars</option>");
+    $("#movie").html("<option value='' disabled selected >Velg film</option>\n" +
+        "            <option value='Interstellar'>Interstellar</option>\n" +
+        "            <option value='Inception'>Inception</option>\n" +
+        "            <option value='Cars'>Cars</option>");
 
     console.log("tøm alt")
     $("#amount").val("");
